@@ -1,0 +1,134 @@
+*{
+    padding:0;
+    margin:0;
+  }
+  body {
+    background-color: black;
+  }
+  
+  .content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #999;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin:15px 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin: 10px;
+  }
+  
+  .headshot {
+    margin: 0;
+  }
+  
+  .headshot figure {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .headshot figure img {
+    position: relative;
+    z-index: 10;
+    margin: 0;
+    border-radius: 25px;
+    border: 6px solid #333;
+  }
+  
+  ul.headshot.ta-photo {
+      width: 450px;
+      margin: 0 auto;
+  }
+  
+  .headshot figure figcaption {
+    position: absolute;
+    z-index: 5;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: scroll;
+  }
+  
+  .headshot figure h2,
+  .headshot figure h3 {
+    text-align: center;
+    color: #222;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .headshot figure h3 {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .headshot figure p {
+    display: block;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 20px 0;
+    color: #fff;
+    text-align: left;
+  }
+  
+  .headshot figure figcaption {
+    top: 0;
+    left: 0;
+    width: 310px;
+    height: 100%;
+    padding: 29px 25px;
+    background-color: rgba(166, 164, 164, 0.8);
+    border-radius: 25px;
+    border: 6px solid #333;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+  }
+  
+  .committee figure figcaption {
+    width: 220px;
+  }
+  
+  .ta-photo figure figcaption {
+    width: 450px;
+  }
+  
+  .headshot figure img {
+    backface-visibility: hidden;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    transition: all .7s;
+  }
+  
+  .headshot figure:hover img,
+  figure.hover img {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  
+  .headshot figure:hover figcaption,
+  figure.hover figcaption {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }

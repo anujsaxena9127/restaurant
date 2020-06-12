@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+#contact {
+  background-color: #111;
+}
+.card-text {
+  color: aquamarine;
+  background-color: black;
+}
+
+.btn btn-primary {
+  background-color: chartreuse;
+}
+
+h2 {
+  color: darkcyan;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+hr {
+  color: chartreuse;
+}
+
+.card-img-top {
+  width: 300px;
+  height: 300px;
+}
