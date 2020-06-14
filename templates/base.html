@@ -1,192 +1,298 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-      <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" 
-      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" 
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
-      crossorigin="anonymous">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  
+ 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
 
-    <title>{% block title %}{% endblock title %}</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg  fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="/home"><span class="fas fa-utensils fa-lg"></span>FOOD HOUSE</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+  <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg  fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="/home"><span class="fas fa-utensils fa-lg"></span>FOOD HOUSE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home"><span class="fa fa-home fa-lg"></span>Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/aboutUs"><span class="fa fa-info fa-lg"></span>
+            About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/menu" tabindex="-1" aria-disabled="true"><span class="fa fa-list fa-lg"></span>
+            Menu
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="/reservations" tabindex="-1" aria-disabled="true"><span
+              class="fas fa-table fa-lg"></span>
+            Book a table
+          </a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/contact" tabindex="-1" aria-disabled="true"><span
+              class="fa fa-address-card fa-lg"></span>
+            Contact
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/gallery" tabindex="-1" aria-disabled="true"><span
+              class="far fa-images fa-lg"></span>
+            Gallery
+          </a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+
+
+    <!-- Button trigger for signup modal modal -->
+   
+   <button type="button" class="btn btn-primary mx-2" data-toggle="modal" data-target="#signupModal">
+    Sign up
+  </button>
+  <!-- Button trigger for login modal modal -->
+  <button type="button" class="btn btn-primary mx-2 " data-toggle="modal" data-target="#loginModal">
+    Login in
+  </button>
+  </nav>
+   <!-- sign up modal modal modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signuptitle">Sign Up here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
         </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/home"><span class="fa fa-home fa-lg"></span>Home <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/aboutUs"><span class="fa fa-info fa-lg"></span>
-About Us</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link " href="/menu" tabindex="-1" aria-disabled="true"><span class="fa fa-list fa-lg"></span>
-Menu
-              </a>
-            </li>
-           
-            <li class="nav-item">
-              <a class="nav-link " href="/reservations" tabindex="-1" aria-disabled="true"><span class="fas fa-table fa-lg"></span>
-Book a table
-              </a>
-            </li>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="/contact" tabindex="-1" aria-disabled="true"><span class="fa fa-address-card fa-lg"></span>
-Contact
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="/gallery" tabindex="-1" aria-disabled="true"><span class="far fa-images fa-lg"></span>
-Gallery
-          </a>
-        </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
-      {% block body %} {% endblock body %}
-
-      {% block footer %} {% endblock footer %}
-<!-- Footer -->
-<footer class="page-footer font-small mdb-color light-3 pt-4">
-
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left">
-    <div style="background-color: #21d192;">
-
-    <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Content -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate
-          esse
-          quasi, veritatis totam voluptas nostrum.</p>
-
       </div>
-      <!-- Grid column -->
+      <div class="modal-body">
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" class="form-control" id="fname" name="fname" placeholder="first name">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" class="form-control" id="lname" 
+              name="lname" placeholder="last name">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email"
+              name="email">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="password"> choose a Password</label>
+              <input type="password" class="form-control" id="password" name="password1">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Password2"> Confirm Password</label>
+              <input type="password" class="form-control" id="Password2"
+              name="Password2">
+            </div>
+          </div>
 
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <p>
-              <a href="#!">HOME</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="/aboutUs">ABOUT US</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="/gallery">GALLERY</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="/reservations">BOOK A TABLE</a>
-            </p>
-          </li>
-        </ul>
-
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
-
-        <!-- Contact details -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <p>
-              <i class="fas fa-home mr-3"></i>  Near PES Engineering College Rd, 3rd cross road , Mandya, Karnataka 571401</p>
-          </li>
-          <li>
-            <p>
-              <i class="fas fa-envelope mr-3"></i> info@example.com</p>
-          </li>
-          <li>
-            <p>
-              <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-          </li>
-          <li>
-            <p>
-              <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-
-        <!-- Social buttons -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
-
-        <!-- Facebook -->
-           <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
-       
-
-      </div>
-      <!-- Grid column -->
 
     </div>
-    <!-- Grid row -->
-
   </div>
-  <!-- Footer Links -->
+</div>
+  <!-- Login modal from bootstrap modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signuptitle">Login here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-row">
+            
+            
+            <div class="form-group col-md-6">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email1"
+              name="email">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="password">  Password</label>
+              <input type="password" class="form-control" id="password" name="password">
+            </div>
+            
+          </div>
 
-  
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
 
-</footer>
-<!-- Footer -->
+    </div>
+  </div>
+</div>
+  {% block body %} {% endblock body %}
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+  {% block footer %} {% endblock footer %}
+  <!-- Footer -->
+  <footer class="page-footer font-small mdb-color light-3 pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+      <div style="background-color: #21d192;">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+            <!-- Content -->
+            <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
+            <p>Here you can use rows and columns to organize your footer content.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate
+              esse
+              quasi, veritatis totam voluptas nostrum.</p>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <p>
+                  <a href="#!">HOME</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="/aboutUs">ABOUT US</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="/gallery">GALLERY</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="/reservations">BOOK A TABLE</a>
+                </p>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+            <!-- Contact details -->
+            <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <p>
+                  <i class="fas fa-home mr-3"></i> Near PES Engineering College Rd, 3rd cross road , Mandya, Karnataka
+                  571401</p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+            <!-- Social buttons -->
+            <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+            <!-- Facebook -->
+            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i
+                class="fa fa-facebook"></i></a>
+            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                class="fa fa-linkedin"></i></a>
+            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+            <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+            <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+
+
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Footer Links -->
+
+
+
+  </footer>
+  <!-- Footer -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
