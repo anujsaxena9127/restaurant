@@ -2,150 +2,173 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}" />
 
-<div class="container">
-  <header class="header">
-    <h1 id="title" class="text-center">Restaurant booking table</h1>
-    <p id="description" class="description text-center">
-      Thank you for taking the time to help us to Book a table for You!
-    </p>
-  </header>
 
-  <form id="survey-form" method="POST" action="/reservations">
-    {% csrf_token %}
-    <div class="form-group">
-      <label id="name-label" for="name">Name</label>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        class="form-control"
-        placeholder="Enter your name"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label id="email-label" for="email">Email</label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        class="form-control"
-        placeholder="Enter your Email"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label id="number-label" for="number"
-        >Age<span class="clue">(optional)</span></label
-      >
-      <input
-        type="number"
-        name="age"
-        id="number"
-        min="10"
-        max="99"
-        class="form-control"
-        placeholder="Age"
-      />
-    </div>
-    <div class="form-group">
-      <p>How many of you are dining?</p>
-      <select id="dropdown" name="role" class="form-control" required>
-        <option disabled selected value>Select group size</option>
-        <option value="individual">Individual (one person)</option>
-        <option value="couple">Couple</option>
-        <option value="smallgroup">Small Group (3-4 people)</option>
-        <option value="largegroup">Large Group (more than 4 people)</option>
-        <option value="prefernot">Prefer Not to say</option>
-      </select>
-    </div>
 
-    <div class="form-group">
-      <p>
-        For what purpose you are booking a table?
-      </p>
-      <select id="most-like" name="purpose" class="form-control" required>
-        <option disabled selected value>Select an option</option>
-        <option value="food">Date</option>
-        <option value="ambience">Birthday</option>
-        <option value="service">Anniversary</option>
-        <option value="menu">party </option>
-        <option value="prices">none of the above</option>
-      </select>
-    </div>
+<section id="contact" class="section-padding my-2">
+      <div class="container">
+        <div class="row">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="https://source.unsplash.com/random/1020x900?restaurant" class="d-block w-100" class="tales" alt="...">
+                  </div>
+                </div>
+              </div>
 
-    <div class="form-group">
-      <p>
-        What would you like to see improved?
-        <span class="clue">(Check all that apply)</span>
-      </p>
+          </div>
+        <div class="row my-2">
+          <div class="col-md-12 text-center">
+            <h1 class="header-h">Book Your table</h1>
+            <p class="header-p text-light">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy <br />nibh euismod tincidunt ut laoreet dolore magna
+              aliquam.
+            </p>
+          </div>
+        </div>
+        <div class="row msg-row">
+          <div class="col-md-4 col-sm-4 mr-15">
+            <div class="media-2">
+              <div class="media-left">
+                <div class="contact-phone bg-1 text-center">
 
-      <label
-        ><input
-          name="prefer"
-          value="Food"
-          type="checkbox"
-          class="input-checkbox"
-        />Food</label
-      >
-      <label>
-        <input
-          name="prefer"
-          value="Ambience"
-          type="checkbox"
-          class="input-checkbox"
-        />Ambience</label
-      >
-      <label
-        ><input
-          name="prefer"
-          value="Service Time"
-          type="checkbox"
-          class="input-checkbox"
-        />Service Time</label
-      >
-      <label
-        ><input
-          name="prefer"
-          value="Service Staff Quality"
-          type="checkbox"
-          class="input-checkbox"
-        />Service Staff Quality</label
-      >
-      <label
-        ><input
-          name="prefer"
-          value="Menu"
-          type="checkbox"
-          class="input-checkbox"
-        />Menu</label
-      >
-      <label
-        ><input
-          name="prefer"
-          value="Prices & Offers"
-          type="checkbox"
-          class="input-checkbox"
-        />Prices & Offers</label
-      >
-    </div>
-
-    <div class="form-group">
-      <p>Any comments or suggestions?</p>
-      <textarea
-        id="comments"
-        class="input-textarea"
-        name="comment"
-        placeholder="Enter your comment here..."
-      ></textarea>
-    </div>
-
-    <div class="form-group">
-      <button type="submit" id="submit" class="submit-button">
-        Book a table
-      </button>
-    </div>
-  </form>
-</div>
+                </div>
+              </div>
+              <div class="media-body">
+                <h4 class="dark-blue regular text-light">
+                  <i class="fas fa-phone fa-1x text-warning"></i>Phone Numbers
+                </h4>
+                <p class="light-blue regular alt-p">
+                  +440 875369208 -
+                  <span class="contacts-sp">Phone Booking</span>
+                </p>
+              </div>
+            </div>
+            <div class="media-2">
+              <div class="media-left">
+                <div class="contact-email bg-14 text-center">
+                  </span>
+                </div>
+              </div>
+              <div class="media-body">
+                <h4 class="dark-blue regular text-light"><i class="fas fa-clock fa-1x text-warning"></i>Opening Hours</h4>
+                <p class="light-blue regular alt-p">
+                  Monday to Friday 09.00 - 24:00
+                </p>
+                <p class="light-blue regular alt-p">
+                  Friday and Sunday 08:00 - 03.00
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-8">
+            <form action="" method="post" role="form" class="contactForm">
+              {% csrf_token %}
+              <div class="col-md-6 col-sm-6 contact-form">
+                <div class="form-group label-floating is-empty">
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    data-rule="minlen:4"
+                    data-msg="Please enter at least 4 chars"
+                  />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="date"
+                    class="form-control label-floating is-empty"
+                    name="date"
+                    id="date"
+                    placeholder="Date"
+                    data-rule="required"
+                    data-msg="This field is required"
+                  />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 contact-form pad-form">
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control label-floating is-empty"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    data-rule="email"
+                    data-msg="Please enter a valid email"
+                  />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 contact-form">
+                <div class="form-group">
+                  <input
+                    type="time"
+                    class="form-control label-floating is-empty"
+                    name="time"
+                    id="time"
+                    placeholder="Time"
+                    data-rule="required"
+                    data-msg="This field is required"
+                  />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 contact-form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control label-floating is-empty"
+                    name="phone"
+                    id="phone"
+                    placeholder="Phone"
+                    data-rule="required"
+                    data-msg="This field is required"
+                  />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 contact-form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control label-floating is-empty"
+                    name="people"
+                    id="people"
+                    placeholder="No. of People"
+                    data-rule="required"
+                    data-msg="This field is required"
+                  />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="col-md-12 contact-form">
+                <div class="form-group label-floating is-empty">
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="5"
+                    rows="3"
+                    data-rule="required"
+                    data-msg="Please write something for us"
+                    placeholder="Message"
+                  ></textarea>
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="col-md-12 btnpad">
+                <div class="contacts-btn-pad">
+                  <button class="contacts-btn">Book Table</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
 {% endblock body %}
