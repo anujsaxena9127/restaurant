@@ -1,231 +1,382 @@
-{% extends 'base.html' %} {% block body %}
- {% load static %}
-  
-
-<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
-
-<div class="container-fluid" id="contact1" >
- 
-  
-  <!-- Modal -->
-<!--Message tool in django-->
-{% for message in messages %}
-<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-  <strong>Message:</strong> {{ message }}
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-{% endfor %}
+{% extends 'base.html' %} {% block body %} {% load static %}
+<script src="https://kit.fontawesome.com/3e34c14145.js" crossorigin="anonymous"></script>
+	  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="aos.css">
+	  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+      <meta name="google-site-verification" content="pM1x1UjnRX8XByY60MODp33adOhfIYNd_sGrkz4HCxg" />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 
-  <div
-    id="carouselExampleIndicators"
-    class="carousel slide"
-    data-ride="carousel"
-  >
-    <ol class="carousel-indicators">
-      <li
-        data-target="#carouselExampleIndicators"
-        data-slide-to="0"
-        class="active"
-      ></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img
-          class="d-block w-100"
-          src="/static/img/1.jpeg"
-          alt="First slide"
-          width="640px"
-          height="426px"
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          class="d-block w-100"
-          src="/static/img/10.jpeg"
-          alt="Second slide"
-          width="640px"
-          height="426px"
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          class="d-block w-100"
-          src="/static/img/4.jpeg"
-          alt="Third slide"
-          width="640px"
-          height="426px"
-        />
-      </div>
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
+<div class="container-fluid">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/random/1020x900?restaurant" class="d-block w-100" alt="...">
     </div>
-    <a
-      class="carousel-control-prev"
-      href="#carouselExampleIndicators"
-      role="button"
-      data-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a
-      class="carousel-control-next"
-      href="#carouselExampleIndicators"
-      role="button"
-      data-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div class="carousel-item">
+    <img src="https://source.unsplash.com/random/1020x900?restaurant" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+    <img src="https://source.unsplash.com/random/1020x900?restaurant" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  </div>
+<!-- ################################################################################################ -->
+<div data-aos="flip-right" data-aos-duration="1000">
+<div class="about-section">
+<div class="inner-width">
+  <h1>About Us</h1>
+  <div class="border"></div>
+  <div class="about-section-row">
+  <div class="about-section-col">
+    <div class="about">
+    <p> Our Chefs offer you perfect cooking, best served dishes with fresh ingredients and old recipes. We have only carefully sourced and seasonal ingredients in our disposal to make rustic dishes. We provide you with daily self-made bread, sourdough pizza, roasted fish-meat-vegetables and many more.
+
+    </p>
+    <a href="#">Read More</a>
+    </div>
+  </div>
+    </div>
+  </div>
   </div>
 </div>
-<div class="container  my-2 " id="contact" >
+</div>
+</div>
+
+          <style>
+              ::-webkit-scrollbar{
+                  background: #ddd;
+                  width: 14px;
+                  }
+                  ::-webkit-scrollbar-track{
+                  box-shadow: inset 0 0 10px #00000070;
+                  border-radius: 10px;
+                  }
+                  ::-webkit-scrollbar-thumb{
+                  background: linear-gradient(125deg,#3498db,#34495e);
+                  border-radius: 10px;
+                  }
+
+                  ::-webkit-scrollbar-thumb:hover{
+                      background: linear-gradient(125deg,#34495e,#3498db);
+                  }
+          </style>
+
+
+<!-- #####################################################################################################################   -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="aos.js"></script>
+  <script type="text/javascript">
+      AOS.init();
+  </script>
+
+<!-- ################################################################################################ -->
+<div data-aos="fade-right" data-aos-duration="1000" data-aos-offset='150'>
+<div class="container" style="padding-top: 3%;">
+  <div class="card-deck my-3">
+    <div class="card" style="box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);">
+      <img src="https://source.unsplash.com/random/restaurant" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Make and See your Blogs</h5>
+        <p class="card-text">Make your own blogs and also see the blogs made by other programmers and like, share and comment.</p>
+        <a href="http://pythonist.pythonanywhere.com/python/blog" class="btn btn-primary"> See Blog</a>
+        <a href="http://pythonist.pythonanywhere.com/python/blog/make_blog" class="btn btn-primary" style="padding-left: 2%;">Make Blog</a>
+      </div>
+    </div>
+    <div class="card" style="box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);">
+      <img src="https://source.unsplash.com/random/restaurant" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Projects</h5>
+        <p class="card-text">You can build projects with your favourite programming language. So get started !</p>
+        <a href="https://source.unsplash.com/random/restaurant" class="btn btn-primary">Projects</a>
+      </div>
+    </div>
+
+    <div class="card" style="box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);">
+      <img src="https://source.unsplash.com/random/restaurant" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Programming News</h5>
+        <p class="card-text">See some of the latest news related to programming and be up-do-date with these growing IT industry.</p>
+        <a href="http://pythonist.pythonanywhere.com/python/news/" class="btn btn-primary">News</a>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .card:hover{
+  transform: scale(1.06);
+  transition-delay: 0.1s;
+  transition-duration: 0.7s;
+  }
+      </style>
+</div>
+
+
+<!-- ################################################# YouTube ####################################################### -->
+        <div class="container" style="padding-top: 3% ;">
+        <h3>Programmers Motivation</h3>
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://source.unsplash.com/random/1020x900?restaurant" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/random/1020x900?restaurant" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/random/1020x900?restaurant" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
 <hr>
-  <h2 class="text">Food offer</h1>
-  </h2>
-  <div class="row mx-2 " >
-    <div class="card col-md-3 mx-2" style="width: 18rem;">
-      <img
-        src="https://source.unsplash.com/random/300x300/?pizza"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body " >
-        <h5 class="card-title">Pizza</h5>
-        <p class="card-text" >
-          This pizza is best pizza made by top chef of my restaurant only on special demanding.
-        </p>
-        <a href="#" class="btn btn-success">Rs.120</a>
-      </div>
-    </div>
-    <div class="card col-md-3 mx-2" style="width: 18rem;">
-      <img
-        src=" https://source.unsplash.com/random/300x300/?food"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">North indian Special</h5>
-        <p class="card-text">
-           This north indian food  is best food made by top chef of my restaurant only on special demanding.
-        </p>
-        <a href="#" class="btn btn-success">Rs.320</a>
-      </div>
-    </div>
-    <div class="card col-md-3 mx-2" style="width: 18rem;">
-      <img src="/static/img/southindian.jpg" 
-        class="card-img-top"
-        alt="..."      />
-      <div class="card-body">
-        <h5 class="card-title">South indian Special</h5>
-        <p class="card-text">
-         This thali is best thali made by top chef of my restaurant only on special demanding.
-        </p>
-        <a href="#" class="btn btn-success">Rs.138</a>
-      </div>
-    </div>
-  <div class="container  my-2 " id="contact" >
-  <h1 class="text">Drinks offer</h1>
-  <div class="row mx-2 " >
-    <div class="card col-md-3 mx-2" style="width: 18rem;">
-      <img
-        src="https://source.unsplash.com/random/300x300/?alcohol drinks"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body " >
-        <h5 class="card-title">alcohol</h5>
-        <p class="card-text" >
-           This alcohol is top class alchol imported from london especially for our customer.
-        </p>
-        <a href="#" class="btn btn-success">Rs.455</a>
-      </div>
-    </div>
-    <div class="card col-md-3 mx-2" style="width: 18rem;">
-      <img
-        src="https://source.unsplash.com/random/300x300/?cold drinks"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">cold drinks</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-success">Rs.65</a>
-      </div>
-    </div>
-    <div class="card col-md-3 mx-2" style="width: 18rem;">
-      <img src="https://source.unsplash.com/random/300x300/?beer drinks"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Beer</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-success">Rs.250</a>
-      </div>
-    </div>
-    <div class="container  my-2 " id="contact" >
-  <h2 class="text">Special Dish</h2>
-  <div class="row mx-2 " >
-    <div class="card col-md-3 mx-2" style="width: 18rem;">
-      <img
-        src="https://source.unsplash.com/random/300x300/?restaurant chicken kabab food"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body " >
-        <h5 class="card-title">Special North indian</h5>
-        <p class="card-text" >
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-success">Rs.980</a>
-      </div>
-    </div>
-    <div class="card col-md-3 mx-2" style="width: 18rem;">
-      <img
-        src="https://source.unsplash.com/random/300x300/?italian food"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Special italian</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-success">Rs.876</a>
-      </div>
-    </div>
-    <div class="card col-md-3 mx-2" style="width: 18rem;">
-      <img src="https://source.unsplash.com/random/300x300/?italian food"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-title">Special chinese</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-success">Rs.1121</a>
-      </div>
-    </div>
+<div id="text" style="font-family: 'Pacifico', cursive; padding-top: 1%; padding-bottom: 2%;"></div>
+
+<script type="text/javascript">
+  var i=0,text;
+  text = "Top Videos on our YouTube channel !!!"
+
+  function typing() {
+    if(i<text.length){
+      document.getElementById("text").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing,80);
+    }
+  }
+  typing();
+</script>
+<style>
+  #text{
+    font-family: 'Acme', sans-serif;
+    font-size: 5ch;
+    text-align: center;
+    font-weight: 3%;
+
+  }
+</style>
+
+<div data-aos="fade-down" data-aos-duration="1000" data-aos-offset='20  0'>
+<div class="container-fluid mainContainer">
+<div class="row my-4 mx-4">
+
+        <div class="col-md-6 col-lg-4 text-center">
+            <img class="rounded-circle" src="/static/img/logo2.png" width="140" height="140">
+            <h2>Make Python projects</h2>
+            <p>
+                Make awesome python projects, with complete explanation and source code.
+            </p>
+            <p>
+
+              <a href="https://www.youtube.com/playlist?list=PLLYdRMXqtvSdSLfm-ytBAoYTJc7AkCWwF" target="blank_"><button class="btn btn-outline-danger">Start Watching »</button></a>
+            </p>
+        </div>
+
+        <div class="col-md-6 col-lg-4 text-center">
+            <img class="rounded-circle" src="/static/img/logo2.png" width="140" height="140">
+            <h2>Fun Stuffs With Python</h2>
+            <p>
+                Make some of the crazy projects with python even in your daily life.
+            </p>
+            <p>
+
+              <a href="https://www.youtube.com/playlist?list=PLLYdRMXqtvSdSLfm-ytBAoYTJc7AkCWwF" target="blank_"><button class="btn btn-outline-danger">Start Watching »</button></a>
+            </p>
+        </div>
+
+        <div class="col-md-6 col-lg-4 text-center">
+            <img class="rounded-circle" src="/static/img/logo1 .png" width="140" height="140">
+            <h2>Learn ML and AI.</h2>
+            <p>
+               Learn ML and AI with python libraries like Scikit-learn and tensorflow.
+            </p>
+            <p>
+              <a href="https://www.youtube.com/watch?v=x5nEb-7UKZI"><button class="btn btn-outline-danger">Start Watching »</button></a>
+            </p>
+          </div>
+        </div>
   </div>
-  
-  <div class="row my-4 mx-4 ">
- <a href="/menu"> <button type="button" class="btn btn-primary btn-lg btn-block" >For more menu click here</button></a>
+
+<style>
+   .iframe-container{
+      position: relative;
+      width: 100%;
+      padding-bottom: 46.25%;
+      height: 0;
+  }
+
+  .iframe-container iframe{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 50%;
+      height: 60%;
+  }
+  .code-frame{
+      position: relative;
+      width: 50%;
+      padding-bottom: 46.25%;
+      height: 0;
+  }
+
+  .code-frame iframe{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+  }
+</style>
+
+<hr>
+<div class="container" style="padding-top: 5%;">
+  <div class="main" style="padding-bottom: 4%;">
+  <div class="footer-container0">
+      <div class="left-col">
+          <img src="/static/img/anuj1.jpeg" alt="" class="logo">
+          <div class="social-media">
+              <a href="https://twitter.com/Pritish88951762?s=20" target="blank_"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.youtube.com/channel/UCQ9F_R0AOwuqipFKNdtTJ2g" target="blank_"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.linkedin.com/in/pritish-mishra-487840198/" target="blank_"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.facebook.com/pritish.mishra.3910" target="blank_"><i class="fab fa-facebook"></i></a>
+              <a href="https://t.me/pritishmishra" target="blank_"><i class="fab fa-telegram-plane"></i></a>
+              <a href="https://codingyou.blogspot.com/" target="blank_"><i class="fab fa-blogger"></i></a>
+          </div>
+          <p class="rights-text">© 2020 Created By <b>PRITISH MISHRA</b> All Rights Reserved.</p>
+      </div>
+      <div class="right-col">
+          <h1 style="font-family: 'Acme';">Our Newsletter :</h1>
+          <div class="border0"></div>
+          <p>Enter Your Email to get our news and updates.</p>
+          <form action="/" class="newsletter-form" method="POST"><input type="hidden" name="csrfmiddlewaretoken" value="CPKBM3eRFw2hgF3QSnfCcPM8sr9YjCI93JpWgNRuzfcRYsdDX7X7zsux9PxCpFh2">
+              <input type="text" class="txtb" placeholder="Enter Your Email" name="email" required>
+              <input type="submit" class="btn0" value="submit">
+          </form>
+      </div>
+  </div>
+</footer>
 </div>
 </div>
+<style>
+  body{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans",sans-serif;
+  }
+  footer{
+  background: #f1f1f1;
+  padding: 90px 0;
+  }
+  .footer-container0{
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  }
+  .logo{
+  width: 100px;
+  }
+  .social-media{
+  margin: 20px 0;
+  }
+  .social-media a{
+  color: #001a21;
+  margin-right: 25px;
+  font-size: 22px;
+  text-decoration: none;
+  transition: .3s linear;
+  }
+  .social-media a:hover{
+  color: #fc5c65;
+  }
+  .right-col h1{
+  font-size: 26px;
+  }
+
+  .newsletter-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+  .txtb{
+  flex: 1;
+  padding: 18px 40px;
+  font-size: 16px;
+  color: #293043;
+  background: #ddd;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 30px;
+  min-width: 260px;
+  }
+  .btn0{
+  padding: 18px 40px;
+  font-size: 16px;
+  color: #f1f1f1;
+  background: #fc5c65;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity .3s linear;
+  }
+  .btn0:hover{
+  opacity: .7;
+  }
+  .page-content{
+  min-height: 100vh;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  @media screen and (max-width:960px) {
+  .footer-container{
+  max-width: 600px;
+  }
+  .right-col{
+  width: 100%;
+  margin-bottom: 60px;
+  }
+  .left-col{
+  width: 100%;
+  text-align: center;
+  }
+  }
+  @media screen and (max-width:700px){
+  .btn0{
+  margin: 0;
+  width: 100%;
+  margin-top: 20px;
+  }
+  }
+</style>
+
+
+
+
+
+</div>
+<!--end of arrangements-->
 
 {% endblock body %}
-

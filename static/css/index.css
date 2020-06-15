@@ -1,30 +1,131 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
-
-#contact {
-  background-color: #111;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Acme", sans-serif;
 }
-.card-text {
-  color: aquamarine;
-  background-color: black;
+.about-section {
+  width: 100%;
+  background: #f1f1f1;
+  padding: 40px 0;
 }
-
-.btn btn-primary {
-  background-color: chartreuse;
+.inner-width {
+  max-width: 1000px;
+  overflow: hidden;
+  padding: 0 20px;
+  margin: auto;
 }
-
-h2 {
-  color: darkcyan;
+.about-section h1 {
   text-align: center;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
+}
+.border {
+  width: 100px;
+  height: 3px;
+  background: #e74c3c;
+  margin: 40px auto;
+}
+.about-section-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-section-col {
+  flex: 50%;
+}
+.about {
+  padding-right: 30px;
+}
+.about p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.about a {
+  display: inline-block;
+  color: #e74c3c;
+  text-decoration: none;
+  border: 2px solid #e74c3c;
+  border-radius: 24px;
+  padding: 8px 40px;
+  transition: 0.4s linear;
+}
+.about a:hover {
+  color: #fff;
+  background: #e74c3c;
+}
+.skills {
+  padding-left: 30px;
+}
+.skill {
+  margin-bottom: 10px;
 }
 
-hr {
-  color: chartreuse;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+  /* background: #ddd; */
+}
+.card-area {
+  width: 400px;
+  margin: 2% auto;
+  box-shadow: 0 2px 20px rgba (0, 0, 0, 0.9);
+}
+.img-area {
+  width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+.img-area img {
+  width: 100%;
+  height: auto;
 }
 
-.card-img-top {
-  width: 300px;
-  height: 300px;
+.img-text {
+  background: #262626;
+  margin-top: -25%;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.img-text h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.img-text h4 {
+  color: #0094ff;
+  margin: 10px 0;
+}
+
+.card-area:hover img {
+  transform: scale(1.1);
+  transition: 0.9s;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.button {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  background-color: #0094ff;
+  width: 150px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  margin-top: 5%;
+}
+.label {
+  display: block;
+  height: 100%;
+  position: relative;
+  top: 0;
+  transition: top 0.35s;
+  width: 100%;
+}
+.button:hover .label {
+  top: -100%;
 }

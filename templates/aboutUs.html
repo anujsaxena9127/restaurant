@@ -4,120 +4,177 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
  
+  <style>
+      body {
+        background: black;
+        background: -moz-linear-gradient(
+          left,
+          RGBA(244, 33, 86, 1) 0%,
+          RGBA(0, 114, 210, 1) 100%
+        );
+        background: -webkit-linear-gradient(
+          left,
+          RGBA(244, 33, 86, 1) 0%,
+          RGBA(0, 114, 210, 1) 100%
+        );
+        background: linear-gradient(
+          to right,
+          RGBA(244, 33, 86, 1) 0%,
+          RGBA(0, 114, 210, 1) 100%
+        );
+        background: filter progid:
+          DXImageTransform.Microsoft.gradient(
+            startColorstr= "#f42156",
+            endColorstr= "#f42156",
+            GradientType=1
+          );
+      }
+
+      .box {
+        position: relative;
+        transition: all 0.2s ease-out 0s;
+      }
+      .box .box-content,
+      .box:after {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+      }
+      .box:after {
+        content: "";
+        display: block;
+        background: #463f9f;
+        top: 20px;
+        bottom: 20px;
+        opacity: 0;
+        transform: rotate3d(-1, 1, 0, 100deg);
+        transition: all 0.4s ease-in-out 0s;
+      }
+      .box:hover:after {
+        opacity: 0.9;
+        transform: rotate3d(0, 0, 0, 0deg);
+      }
+      .box img {
+        width: 350px;
+        height: 350px;
+      }
+      .box .box-content {
+        text-align: center;
+        top: 45%;
+        opacity: 0;
+        z-index: 1;
+        -webkit-transform: translate(10%, -30%);
+        transform: translate(10%, -30%);
+        transition: all 0.2s ease-out 0s;
+      }
+      .box:hover .box-content {
+        opacity: 1;
+        transform: translate(0, -50%);
+        transition-delay: 0.2s;
+      }
+      .box .title {
+        display: block;
+        font-size: 22px;
+        font-weight: 700;
+        color: #39b54a;
+        margin: 0 0 10px;
+      }
+      .box .post {
+        display: block;
+        font-size: 15px;
+        color: #f7f7b9;
+        margin-bottom: 20px;
+      }
+      .badge {
+        text-align: center;
+      }
+    </style>
+
+ <div class="container my-5 pt-5">
+      <div class="row">
+        <h1 class="text">
+          <span class="badge badge-warning">Restaurant partner</span>
+        </h1>
+      </div>
+      <div class="row mt-30">
+        <div class="col-md-4 col-sm-6">
+          <div class="box">
+            <img
+              src="http://bestjquery.com/tutorial/hover-effect/demo125/images/img-1.jpg"
+            />
+            <div class="box-content">
+              <h3 class="title">Williamson</h3>
+              <span class="post">Web Designer</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="box">
+            <img
+              src="http://bestjquery.com/tutorial/hover-effect/demo125/images/img-2.jpg"
+            />
+            <div class="box-content">
+              <h3 class="title">Kristiana</h3>
+              <span class="post">Web Developer</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="box">
+            <img
+              src="http://bestjquery.com/tutorial/hover-effect/demo125/images/img-3.jpg"
+            />
+            <div class="box-content">
+              <h3 class="title">Kristiana</h3>
+              <span class="post">Web Developer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h1 class="text">
+          <span class="badge badge-warning">Restaurant staff</span>
+        </h1>
+      </div>
+      <div class="row mt-30 my-4">
+        <div class="col-md-4 col-sm-6">
+          <div class="box">
+            <img height="350px" width="350px" src="table1.jpg" />
+            <div class="box-content">
+              <h3 class="title">Williamson</h3>
+              <span class="post">Web Designer</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="box">
+            <img
+              src="http://bestjquery.com/tutorial/hover-effect/demo125/images/img-2.jpg"
+            />
+            <div class="box-content">
+              <h3 class="title">Kristiana</h3>
+              <span class="post">Web Developer</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="box">
+            <img
+              src="http://bestjquery.com/tutorial/hover-effect/demo125/images/img-3.jpg"
+            />
+            <div class="box-content">
+              <h3 class="title">Kristiana</h3>
+              <span class="post">Web Developer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
 
-<head>
-  <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
-</head>
 
 
-  <div class="content">
-  <h1>Meet the head of the restaurant</h1>
-<ul class="headshot">
-  <li>
-        <figure>
-            <img src="http://clemsongc.com/eblack4/diss/desjardins.jpg" width="300px" height="300px" alt=""/>
-            <figcaption>
-              <h2>John D. DesJardins, PhD</h2>
-              <h3>Associate Professor</h3>
-                <p>Dr. DesJardins is the Hambright Leadership associate professor in Bioengineering at Clemson University and the director of the Frank H. Stelling and C. Dayton Riddle Orthopaedic Education and Research Laboratory at CUBEInC.</p><p>He has co-authored over 200 peer-reviewed conference or journal publications in the areas of biomechanics, tribology, engineering education and implant design. He actively engages in many professional societies and review panels, including BMES, ASEE, VentureWell, ORS, NIH and NSF. His multi-disciplinary research teams have been funded through NASA, DoT, NIH, DoD, NSF, the Gates Foundation, and numerous biomedical industry contracts. His work has been featured on TEDx and The Academic Minute on NPR. He directs the bioengineering senior capstone design program, leads a bioengineering study abroad program in bioethics to Spain each summer, and he directs the NIH funded Clemson-GHS summer needs-finding experience for bioengineering students called DeFINE.</p>
-            </figcaption>
-        </figure>
-    </li>  
-  <li>
-        <figure>
-            <img src="/static/img/anuj1.jpeg" width="300px" height="300px" alt=""/>
-            <figcaption>
-              <h2>Breanne Przestrzelski</h2>
-              <h3>PhD Candidate in Bioengineering</h3>
-                <p>Breanne Przestrzelski is a University Innovation Fellow at Clemson University where she is pursuing her PhD in Bioengineering with a focus on innovation of biomedical devices and translation thereof through immersion of bioengineers in design and entrepreneurship opportunities.  The University Innovation Fellowship, which is a program of Epicenter and a joint-venture of VentureWell and Stanford University, has inspired Breanne to share her passion for design and entrepreneurship through a variety of initiatives she is helping to bring to Upstate South Carolina, one of which is through the innovative and game-based learning she is implementing in her role as co-instructor for the Bioengineering Senior Design class.  Breanne obtained her B.S. in May 2012 (research focus: nanomedicine technology) and her M.S. degree in August 2013 (research focus: glenoid loading and stability of the inlay verus onlay shoulder system) both from the Clemson University bioengineering department.</p>
-            </figcaption>
-        </figure>
-    </li>
-  
-  <li>
-        <figure>
-            <img src="http://clemsongc.com/eblack4/diss/me.jpg" width="300px" height="300px" alt=""/>
-            <figcaption>
-              <h2>Erica B. Walker</h2>
-              <h3>PhD Candidate in Curriculum & Instruction</h3>
-                <p>With a BFA in Film Production from University of Colorado, Boulder and a MS from Clemson in Graphic Communications, Erica's background in visual communications includes feature film production, web design, print buyer, marketer, and graphic design for print. At Clemson University, Erica has connections with several departments including as a lecturer in Graphic Communications, as a PhD Candidate in the School of Education, and as a research partner in curriculum development with the BioEngineering department. Within the Department of Graphic Communications, Erica teaches courses in Photography, Video, Web Development, and Entrepreneurship. One of her current research interests is entrepreneurship education across disciplines. For the past year, she has been working closely with the Bioengineering department as a curriculum developer to increase opportunities for entrepreneurial education and interactive learning in the senior design capstone course.</p>
-            </figcaption>
-        </figure>
-    </li>
-</ul>
-  
-  <h1>Meet the committee</h1>
-<ul class="headshot committee">
-  <li>
-        <figure>
-            <img src="https://images-na.ssl-images-amazon.com/images/I/31Vc0WKupuL._UX250_.jpg" width="214px" height="270px" alt=""/>
-            <figcaption>
-              <h2>D. Matthew Boyer, Ph.D.</h2>
-              <h3>Assistant Professor of Digital Media & Learning</h3>
-                <p>Lorem ipsum dolor sit amet, ius sanctus placerat assentior et. Mea veniam libris inimicus an, tollit omnium eam ex, singulis accusamus contentiones vis ea. Ut amet nulla instructior vis, ad sit accusam assueverit. Te nec audiam labitur molestiae, an tempor quaestio dignissim pri.</p><p>
-
-Doctus regione forensibus te sed, an eros vidisse mei. Ferri epicurei ea pri, tota mentitum iracundia at eam. Nam at erat impetus quaestio. In sed cibo eleifend disputationi. Eum oratio lucilius delicata at, no esse nonumes mea.</p>
-            </figcaption>
-        </figure>
-    </li>  
-  <li>
-        <figure>
-            <img src="http://newsstand.clemson.edu/wp-content/uploads/2015/07/John-Leininger-Story.jpg" width="214px" height="270px" alt=""/>
-            <figcaption>
-              <h2>Lisa Benson, Ph.D.</h2>
-              <h3>Associate Professor in Engineering and Science Education</h3>
-                <p>Lorem ipsum dolor sit amet, ius sanctus placerat assentior et. Mea veniam libris inimicus an, tollit omnium eam ex, singulis accusamus contentiones vis ea. Ut amet nulla instructior vis, ad sit accusam assueverit. Te nec audiam labitur molestiae, an tempor quaestio dignissim pri.</p><p>
-
-Doctus regione forensibus te sed, an eros vidisse mei. Ferri epicurei ea pri, tota mentitum iracundia at eam. Nam at erat impetus quaestio. In sed cibo eleifend disputationi. Eum oratio lucilius delicata at, no esse nonumes mea.</p>
-            </figcaption>
-        </figure>
-    </li>
-  <li>
-        <figure>
-            <img src="/static/img/anuj.jpg" width="214px" height="270px" alt=""/>
-            <figcaption>
-              <h2>Sean Williams, Ph.D.</h2>
-              <h3>Professor in Communications</h3>
-                <p>Lorem ipsum dolor sit amet, ius sanctus placerat assentior et. Mea veniam libris inimicus an, tollit omnium eam ex, singulis accusamus contentiones vis ea. Ut amet nulla instructior vis, ad sit accusam assueverit. Te nec audiam labitur molestiae, an tempor quaestio dignissim pri.</p><p>
-
-Doctus regione forensibus te sed, an eros vidisse mei. Ferri epicurei ea pri, tota mentitum iracundia at eam. Nam at erat impetus quaestio. In sed cibo eleifend disputationi. Eum oratio lucilius delicata at, no esse nonumes mea.</p>
-            </figcaption>
-        </figure>
-    </li>
-  <li>
-        <figure>
-            <img src="http://newsstand.clemson.edu/wp-content/uploads/2015/07/John-Leininger-Story.jpg" width="214px" height="270px" alt=""/>
-            <figcaption>
-              <h2>John Leininger, Ph.D.</h2>
-              <h3>Professor in Graphic Communications</h3>
-                <p>John Leininger has been a Professor of Graphic Communications at Clemson University for 28 years. His focus had been in print design and production, but as digital printing became practical and cost effective in the last decade he began to work with “Variable Data Printing” (VDP). The natural evolution was to combine mailing into his instructional plan. As the process continued, direct mail and marketing strategies became a foundation of all his teaching. The last four summers he has taught a class on “Mailing, Fulfillment and Marketing Services” as an on-campus class, distance learning class and industry webinar series.</p><p>
-
-John speaks at conferences throughout the year (including events like the National Postal Forum, Document Strategy Forum, On-Demand, Graph Expo, etc.) on variable data, database development, mailing and marketing services. His current research is focused on evaluating print design strategies with eye tracking software, marketing analytics through web tracking portals and using QR codes and hidden watermarks as marketing tools. Seven years ago John created the VDP Traveling Laptop Training Consortium and has conducted hands-on training across the country over 100 times. The training has showed over 1,600 people how to work with VDP and to maximize response rates and to optimize mail piece design to work within the USPS rules and regulations. Like his teaching, John’s training and presentation strategy reflects the philosophy in the Clemson University Department of Graphic Communication’s Mission Statement: To develop dedicated, practical problem solving people for the printing, publishing, imaging, packaging and allied industries.</p>
-            </figcaption>
-        </figure>
-    </li>
-</ul>
-    
-    <h1>Meet the chef Assistants</h1>
-<ul class="headshot ta-photo">
-  <li>
-        <figure>
-            <img src="https://cft.vanderbilt.edu/wp-content/uploads/sites/59/8243752575_a84075d751_b.jpg" width="450px" height="300px" alt=""/>
-            <figcaption>
-              <p>Andrew Cobb, Ph.D. Student in Bioengineering</p>
-<p>Alan Marionneaux, Ph.D. Student in Bioengineering</p>
-<p>Zachary Reinhardt, Ph.D. Student in Bioengineering</p>
-<p>Zahra Ronaghi, Ph.D. Student in Bioengineering</p>
-<p>Tigran Abramyan, Ph.D. Student in Bioengineering</p>
-<p>Clay Morton, Ph.D. Student in Bioengineering</p>
-<p> Clay Carson, Masters student in Graphic Communications</p>
-            </figcaption>
-        </figure>
-    </li>  
-    </ul>
-  </div>
 
 {% endblock body %}
