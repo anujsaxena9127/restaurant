@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from django.shortcuts import render,HttpResponse
-
+from django.contrib.auth.models import User
 
 # Create your views here.
 #from myapp.models import Contact
@@ -59,4 +59,28 @@ def contact(request):
 
 
 def gallery(request):
+    return render(request, 'gallery.html')
+
+
+def handleSignup(request):
+    if request.method=='POST':
+         #get the post parameters#
+         username=request.POST['username']
+         fname=request.POST['fname']
+         lname = request.POST['lname']
+         email = request.POST['email']
+         password1 = request.POST['password1']
+         password2 = request.POST['password2']
+
+         #checks for error in filling form
+         myuser=User.objects.create_user(username,email,password1)
+         myuser.first_name=fname
+         myuser.last_name=lname
+         myuser.save()
+
+    else:
+        return HttpResponse('404 not found')
+
+
+
     return render(request, 'gallery.html')
