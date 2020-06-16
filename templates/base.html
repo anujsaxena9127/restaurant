@@ -66,12 +66,26 @@
           </a>
         </li>
       </ul>
+    
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     
+ {% if user.is_authenticated %}
+ <ul class="navbar-nav ml-auto">
+ <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Welcome {{request.user}}
+  </a>
+  <div class="dropdown-menu ml-2" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="/logout"><button type="button" class="btn btn-primary">Logout</button></a>
+   </div>
+</li>
+ </ul>
 
+
+ {% else %}
 
     <!-- Button trigger for signup modal modal -->
    
@@ -82,6 +96,7 @@
   <button type="button" class="btn btn-primary mx-2 " data-toggle="modal" data-target="#loginModal">
     Login in
   </button>
+  {% endif %}
 </div>
   </nav>
    <!-- sign up modal modal modal -->
@@ -184,14 +199,7 @@
   {% block body %}
 
   <!--Message tool in django-->
-{% for message in messages %}
-<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-  <strong>Message:</strong> {{ message }}
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-{% endfor %}
+
 
 <!--End of message tool-->
   

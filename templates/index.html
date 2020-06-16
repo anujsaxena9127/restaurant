@@ -11,6 +11,19 @@
 
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
+
+
+
+
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+  <strong>Message:</strong> {{ message }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %}
+
 <div class="container-fluid">
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -78,6 +91,7 @@
 <!-- ################################################################################################ -->
 <div data-aos="fade-right" data-aos-duration="1000" data-aos-offset='150'>
 <div class="container" style="padding-top: 3%;">
+  <h1> Special Events<span class="badge badge-secondary">offer</span></h1>
   <div class="card-deck my-3">
     <div class="card" style="box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);">
       <img src="https://source.unsplash.com/random/400x300/?restaurant breakfast" class="card-img-top" alt="...">
@@ -113,6 +127,7 @@
   transition-delay: 0.1s;
   transition-duration: 0.7s;
   }
+  
       </style>
 </div>
 

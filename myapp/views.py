@@ -85,6 +85,8 @@ def handleSignup(request):
             messages.error(request, "username must be contain letters and numbers")
             return redirect('home')
 
+
+
         if password1!=password2:
             messages.error(request, "password doesnt match")
             return redirect('home')
@@ -96,8 +98,10 @@ def handleSignup(request):
         messages.success(request,"Your account is successfully created")
         return redirect('home')
 
-    else:
-        return HttpResponse('404 not found')
+        
+
+
+    return HttpResponse('404 not found')
 
 def handlelogin(request):
     if request.method == 'POST':
