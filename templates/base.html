@@ -87,6 +87,9 @@
 
  {% else %}
 
+ {% load socialaccount %}
+
+
     <!-- Button trigger for signup modal modal -->
    
    <button type="button" class="btn btn-primary mx-2" data-toggle="modal" data-target="#signupModal">
@@ -94,7 +97,7 @@
   </button>
   <!-- Button trigger for login modal modal -->
   <button type="button" class="btn btn-primary mx-2 " data-toggle="modal" data-target="#loginModal">
-    Login in
+    Login
   </button>
   {% endif %}
 </div>
@@ -179,10 +182,11 @@
             </div>
             
           </div>
-
           <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="{% url 'social:begin' 'facebook' %}"> <button type="button" class="btn btn-primary btn-lg btn-block">facebook login</button></a> 
-        <a href="{% url 'social:begin' 'github' %}"> <button type="button" class="btn btn-warning btn-lg btn-block">Github login</button></a>
+          <a href="{% provider_login_url "google"  %}"> <button type="button" class="btn btn-danger btn-lg btn-block mt-2">Google login</button></a>
+          
+        
+        
 
         </form>
       </div>

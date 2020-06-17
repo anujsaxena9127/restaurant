@@ -36,16 +36,15 @@ def reservations(request):
 
     if request.method == "POST":
         name = request.POST.get('name')
-        email = request.POST.get('email')
-        age = request.POST.get('age')
+        date = request.POST.get('date')
+        email= request.POST.get('email')
+        time = request.POST.get('time')
+        phone = request.POST.get('phone')
+        people = request.POST.get('people')
+        message = request.POST.get('message')
 
-        role = request.POST.get('role')
-        prefer = request.POST.get('prefer')
-        comment = request.POST.get('comment')
-        purpose = request.POST.get('purpose')
 
-        reservations = table(name=name, email=email, age=age, prefer=prefer, role=role, comment=comment,
-                             purpose=purpose)
+        reservations = table(name=name, date=date,email=email,time=time ,phone=phone, people=people, message=message)
 
         reservations.save()
 

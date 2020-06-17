@@ -37,9 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django.contrib.sites',  # for google
     # social app settings
-    'social_django'
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # providers of allauth are
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.github',
+
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -73,21 +84,33 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'hello.wsgi.application'
 
+AUTHENTICATION_BACKENDS = [
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+]
+
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-#261736975254482 -app id
-#f9c3b49f47669fbb0e6e8af6cf909e5b -app secret
+# 261736975254482 -app id
+# f9c3b49f47669fbb0e6e8af6cf909e5b -app secret
+
+# 716306222920-nr2mlidb9urthbud2o9rh5odofr0iivd.apps.googleusercontent.com -google cliet id
+# 5dOLk4BEguN2AsHmP_1LckXx  -google secret key
 
 
-SOCIAL_AUTH_FACEBOOK_KEY	=	'261736975254482'	# Facebook App	ID
-SOCIAL_AUTH_FACEBOOK_SECRET	=	'f9c3b49f47669fbb0e6e8af6cf909e5b'	# Facebook App Secret
+# SOCIAL_AUTH_FACEBOOK_KEY = '261736975254482'  # Facebook App	ID
+# SOCIAL_AUTH_FACEBOOK_SECRET = 'f9c3b49f47669fbb0e6e8af6cf909e5b'  # Facebook App Secret
 
-SOCIAL_AUTH_GITHUB_KEY = '6a1fbb8ae329f1ab1785'  # github id
-SOCIAL_AUTH_GITHUB_SECRET = 'e050c43066705ebd71603ee536b5b3c978eb278f'  # github secret key
+# SOCIAL_AUTH_GITHUB_KEY = '6a1fbb8ae329f1ab1785'  # github id
+# SOCIAL_AUTH_GITHUB_SECRET = 'e050c43066705ebd71603ee536b5b3c978eb278f'  # github secret key
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-
 
 DATABASES = {
     'default': {
@@ -115,15 +138,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # soial app change settings
-AUTHENTICATION_BACKENDS = [
 
-    'social_core.backends.facebook.FacebookOAuth2',
-    'social_core.backends.github.GithubOAuth2',
-    'social_core.backends.linkedin.LinkedinOAuth2',
-
-    'django.contrib.auth.backends.ModelBackend',
-
-]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -142,6 +157,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+SITE_ID = 1
 
 # tages of message overide
 

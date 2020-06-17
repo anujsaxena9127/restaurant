@@ -13,6 +13,6 @@ urlpatterns = [
     path('signup', views.handleSignup, name='handlesSignup'),
     path('login', views.handlelogin, name='handleslogin'),
     path('logout', views.handlelogout, name='handleslogout'),
-    path('social-auth/', include('social_django.urls', namespace='social'))
+    path('accounts/', include('allauth.urls')),
 
 ]

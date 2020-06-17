@@ -32,13 +32,12 @@ pur=[('1','Date'),
 
 class table(models.Model):
     name = models.CharField(max_length=30)
-    email = models.CharField(max_length=30)
-    age= models.IntegerField()
-
-    role=models.CharField( max_length=2,choices=rolech,default='')
-    prefer= models.TextField(max_length=30,null=True,blank=True)
-    purpose = models.CharField(max_length=2,choices=pur,default='')
-    comment= models.TextField(max_length=300,null=True,blank=True)
+    date = models.CharField(max_length=230)
+    email = models.EmailField(max_length = 254)
+    time = models.CharField(max_length=12,default='')
+    phone = models.CharField(max_length=30,default='')
+    people = models.IntegerField(default='')
+    message= models.TextField(max_length=300,null=True,blank=True)
 
 
     def __str__(self):
