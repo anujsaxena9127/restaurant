@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 from django.contrib.messages import constants as messages
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # social app settings
+    'social_django'
 ]
 
 MIDDLEWARE = [
@@ -63,6 +64,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect'
             ],
         },
     },
@@ -70,9 +73,21 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'hello.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+#261736975254482 -app id
+#f9c3b49f47669fbb0e6e8af6cf909e5b -app secret
+
+
+SOCIAL_AUTH_FACEBOOK_KEY	=	'261736975254482'	# Facebook App	ID
+SOCIAL_AUTH_FACEBOOK_SECRET	=	'f9c3b49f47669fbb0e6e8af6cf909e5b'	# Facebook App Secret
+
+SOCIAL_AUTH_GITHUB_KEY = '6a1fbb8ae329f1ab1785'  # github id
+SOCIAL_AUTH_GITHUB_SECRET = 'e050c43066705ebd71603ee536b5b3c978eb278f'  # github secret key
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 DATABASES = {
     'default': {
@@ -80,7 +95,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -100,6 +114,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# soial app change settings
+AUTHENTICATION_BACKENDS = [
+
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.linkedin.LinkedinOAuth2',
+
+    'django.contrib.auth.backends.ModelBackend',
+
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -114,16 +138,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
 
-#tages of message overide
+# tages of message overide
 
 MESSAGE_TAGS = {
-    messages.ERROR:'danger'
+    messages.ERROR: 'danger'
 }
 
 # added manualy by me

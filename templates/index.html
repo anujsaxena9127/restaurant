@@ -272,6 +272,7 @@
           <div class="border0"></div>
           <p>Enter Your Email to get our news and updates.</p>
           <form action="/" class="newsletter-form" method="POST"><input type="hidden" name="csrfmiddlewaretoken" value="CPKBM3eRFw2hgF3QSnfCcPM8sr9YjCI93JpWgNRuzfcRYsdDX7X7zsux9PxCpFh2">
+            {% csrf_token %}
               <input type="text" class="txtb" placeholder="Enter Your Email" name="email" required>
               <input type="submit" class="btn0" value="submit">
           </form>

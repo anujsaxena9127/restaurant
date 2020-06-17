@@ -181,6 +181,9 @@
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="{% url 'social:begin' 'facebook' %}"> <button type="button" class="btn btn-primary btn-lg btn-block">facebook login</button></a> 
+        <a href="{% url 'social:begin' 'github' %}"> <button type="button" class="btn btn-warning btn-lg btn-block">Github login</button></a>
+
         </form>
       </div>
 

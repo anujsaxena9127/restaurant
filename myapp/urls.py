@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from myapp import views
 
 urlpatterns = [
@@ -12,6 +12,7 @@ urlpatterns = [
     path('gallery', views.gallery,name='gallery'),
     path('signup', views.handleSignup, name='handlesSignup'),
     path('login', views.handlelogin, name='handleslogin'),
-    path('logout', views.handlelogout, name='handleslogout')
+    path('logout', views.handlelogout, name='handleslogout'),
+    path('social-auth/', include('social_django.urls', namespace='social'))
 
 ]

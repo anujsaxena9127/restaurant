@@ -29,6 +29,11 @@ def menu(request):
 
 
 def reservations(request):
+    if not request.user.is_authenticated:
+        messages.error(request,'First Login In ')
+        return render(request, 'index.html')
+
+
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -98,7 +103,7 @@ def handleSignup(request):
         messages.success(request,"Your account is successfully created")
         return redirect('home')
 
-        
+
 
 
     return HttpResponse('404 not found')
