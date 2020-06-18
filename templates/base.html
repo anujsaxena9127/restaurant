@@ -88,6 +88,7 @@
  {% else %}
 
  {% load socialaccount %}
+ {% providers_media_js %} 
 
 
     <!-- Button trigger for signup modal modal -->
@@ -116,7 +117,15 @@
       <div class="modal-body">
         <form method="POST" action="/signup">
           {% csrf_token %}
+         
+            <div class="form-group col-md-6">
+          <a href="{% provider_login_url "google"  %}"> <button type="button" class="btn btn-danger btn-lg btn-block mx-2 ml-2"><i class="fab fa-google" style="margin-right: 16px;"></i>Google </button></a>
+          <a class="mx-2" href="{% provider_login_url "facebook" method="js_sdk" %}"> <button type="button" class="btn btn-primary btn-lg btn-block mx-2 "><i class="fab fa-facebook" style="margin-right: 16px;"></i>Facebook </button></a>
+        
+      </div>
+          <h5 class="ml-3 "><span class="badge badge-warning">OR</span></h5>
           <div class="form-row">
+           
             <div class="form-group col-md-6">
               <label for="Username1">Username</label>
               <input type="text" class="form-control" id="username1"
@@ -168,7 +177,18 @@
       <div class="modal-body">
         <form method="POST" action="/login">
           {% csrf_token %}
+          
+          
+            <div class="form-group col-md-6">
+            <a href="{% provider_login_url "google"  %}"> <button type="button" class="btn btn-danger btn-lg btn-block mx-2 ml-2"><i class="fab fa-google" style="margin-right: 16px;"></i>Google </button></a>
+            <a class="mx-2" href="{% provider_login_url "facebook" method="js_sdk" %}"> <button type="button" class="btn btn-primary btn-lg btn-block mx-2 "><i class="fab fa-facebook" style="margin-right: 16px;"></i>Facebook </button></a>
+        
+        </div>
+      
+            <h5 class="text-center"><span class="badge badge-warning">OR</span></h5>
           <div class="form-row">
+          
+            
             
             
             <div class="form-group col-md-6">
@@ -183,7 +203,7 @@
             
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
-          <a href="{% provider_login_url "google"  %}"> <button type="button" class="btn btn-danger btn-lg btn-block mt-2">Google login</button></a>
+          
           
         
         

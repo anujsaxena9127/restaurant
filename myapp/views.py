@@ -29,9 +29,7 @@ def menu(request):
 
 
 def reservations(request):
-    if not request.user.is_authenticated:
-        messages.error(request,'First Login In ')
-        return render(request, 'index.html')
+
 
 
     if request.method == "POST":
@@ -52,6 +50,11 @@ def reservations(request):
 
 
 def contact(request):
+    if not request.user.is_authenticated:
+        messages.error(request,'First Login In ')
+        return render(request, 'index.html')
+
+
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
