@@ -20,8 +20,7 @@ def home(request):
     return render(request, 'index.html')
 
 
-def aboutUs(request):
-    return render(request, 'aboutUs.html')
+
 
 
 def menu(request):
@@ -29,20 +28,18 @@ def menu(request):
 
 
 def reservations(request):
-
-
-
     if request.method == "POST":
         name = request.POST.get('name')
-        date = request.POST.get('date')
-        email= request.POST.get('email')
-        time = request.POST.get('time')
-        phone = request.POST.get('phone')
-        people = request.POST.get('people')
-        message = request.POST.get('message')
+        email = request.POST.get('email')
+        age = request.POST.get('age')
 
+        role = request.POST.get('role')
+        prefer = request.POST.get('prefer')
+        comment = request.POST.get('comment')
+        purpose = request.POST.get('purpose')
 
-        reservations = table(name=name, date=date,email=email,time=time ,phone=phone, people=people, message=message)
+        reservations = table(name=name, email=email, age=age, prefer=prefer, role=role, comment=comment,
+                             purpose=purpose)
 
         reservations.save()
 
@@ -50,11 +47,6 @@ def reservations(request):
 
 
 def contact(request):
-    if not request.user.is_authenticated:
-        messages.error(request,'First Login In ')
-        return render(request, 'index.html')
-
-
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
@@ -92,8 +84,6 @@ def handleSignup(request):
             messages.error(request, "username must be contain letters and numbers")
             return redirect('home')
 
-
-
         if password1!=password2:
             messages.error(request, "password doesnt match")
             return redirect('home')
@@ -105,10 +95,8 @@ def handleSignup(request):
         messages.success(request,"Your account is successfully created")
         return redirect('home')
 
-
-
-
-    return HttpResponse('404 not found')
+    else:
+        return HttpResponse('404 not found')
 
 def handlelogin(request):
     if request.method == 'POST':
