@@ -64,6 +64,18 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'hello.urls'
 
+
+
+
+#Email Settings
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.zoho.in'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'davidsmith2831@gmail.com'
+EMAIL_HOST_PASSWORD = 'UL1nD8hu2hYU'
+DEFAULT_FROM_EMAIL = 'davidsmith2831@gmail.com'
+SERVER_EMAIL = 'davidsmith2831@gmail.com'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
