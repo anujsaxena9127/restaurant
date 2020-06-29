@@ -5,7 +5,7 @@ Here is a real life application build with django, bootstrap-4
 
 This application will manage Restaurant name <b>Food House </b> things automatically.
 
-You/Your partner will be able to:
+## Features
 ```
 1. Home ;_
 2.Menu :-You can view the menu of my restaurant  
@@ -31,15 +31,12 @@ Cheers!
 ### First page  .
 ![Screenshot](screenshot/1.png)
  
-### After sucessfull Signup you can login .
-![Screenshot](screenshot/signup.png)  
+ 
 ### You can Book a table here.
 ![Screenshot](screenshot/Bookatable.png)  
-### Contact page is restricted unless user sign in.
-![Screenshot](screenshot/contact.png)  
+  
  
-###  Here is mobile view .
-![Screenshot](screenshot/mobileview.png)  
+
 
 
 ## If you found this usefull don't forget to hit a star :) 
