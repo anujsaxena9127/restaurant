@@ -33,7 +33,7 @@ myapp==0.1.dev0
 mysql-client==0.0.1
 mysqlclient==1.4.2
 nltk==3.4.1
-Pillow==6.1.0
+Pillow==9.0.1
 pipenv==2018.11.26
 pycparser==2.19
 PyHamcrest==1.9.0
