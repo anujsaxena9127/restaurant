@@ -53,7 +53,7 @@ urllib3==1.26.5
 views==0.3
 virtualenv==16.7.2
 virtualenv-clone==0.5.3
-Werkzeug==0.15.2
+Werkzeug==0.15.5
 wikipedia==1.4.0
 wrapt==1.11.2
 zope.interface==4.6.0
