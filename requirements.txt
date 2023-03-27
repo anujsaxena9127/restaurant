@@ -34,7 +34,7 @@ mysql-client==0.0.1
 mysqlclient==1.4.2
 nltk==3.6.6
 Pillow==9.3.0
-pipenv==2018.11.26
+pipenv==2022.1.8
 pycparser==2.19
 PyHamcrest==1.9.0
 pylint==2.3.1
